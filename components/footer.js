@@ -1,11 +1,12 @@
 function footer(){
     return `
-    <div>
+    <div class="footer_newsletter">
         <label>JOIN OUR NEWSLETTER</label>
+        <br/>
         <br/>
         <input id="news_letter" type="text" placeholder="ENTER YOUR EMAIL ADDRESS HERE" />
     </div>
-    <div>
+    <div class="footer_flex">
         <p>TIKTOK</p>
         <p>INSTAGRAM</p>
         <p>FACEBOOK</p>
