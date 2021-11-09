@@ -15,4 +15,6 @@
 .footer_newsletter input{
     padding: 0.5% ;
     width: 20%;
+    border: none ;
+    text-decoration: underline;
 }
