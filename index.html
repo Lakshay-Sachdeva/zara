@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
     <div id="navbar"></div>
-    <div></div>
+    <div id="categories"></div>
     <div id="footer"></div>
     
 </body>
@@ -22,4 +23,46 @@
     nav_div.innerHTML = navbar() ;
     let foot = document.getElementById("footer") ;
     foot.innerHTML = footer() ;
+
+    let categ = [
+        {
+            image:"./images/man.webp",
+            name:"Man",
+            description:"Introducing the Fall/Winter 2021 Collection"
+        },
+        {
+            image:"./images/woman.jpg",
+            name:"Woman",
+            description:"Introducing the Fall/Winter 2021 Collection"
+        },
+        {
+            image:"./images/kids.jpg",
+            name:"Kids",
+            description:"Introducing the Fall/Winter 2021 Collection"
+        }
+    ]
+
+    let parent_div = document.getElementById("categories") ;
+
+    categ.forEach(el=>{
+
+        let category_div = document.createElement("div") ;
+        category_div.onclick = () =>{
+            window.location = "./products.html" ;
+        }
+
+        let image = document.createElement("img") ;
+        image.src = el.image
+
+        let caption = document.createElement("p") ;
+        caption.innerText = el.description
+
+
+        category_div.append(image , caption) ;
+
+        parent_div.append(category_div) ;
+    }) ;
+
+
+
 </script>
