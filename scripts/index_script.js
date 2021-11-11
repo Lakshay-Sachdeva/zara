@@ -1,17 +1,17 @@
 
 let categ = [
     {
-        image:"./images/man.webp",
+        image:"./images/index/man.webp",
         name:"Man",
         description:"Introducing the Fall/Winter 2021 Collection"
     },
     {
-        image:"./images/woman.jpg",
+        image:"./images/index/woman.jpg",
         name:"Woman",
         description:"Introducing the Fall/Winter 2021 Collection"
     },
     {
-        image:"./images/kids.jpg",
+        image:"./images/index/kids.jpg",
         name:"Kids",
         description:"Introducing the Fall/Winter 2021 Collection"
     }
