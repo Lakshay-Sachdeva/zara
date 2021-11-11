@@ -1,0 +1,16 @@
+#categories{
+    display: flex;
+    overflow-x: scroll;
+    margin: 8% 25%
+}
+#categories div{
+    
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+#categories div img{
+    margin-top:10%;
+    height: 50vh;
+    width: 50vw;
+}
