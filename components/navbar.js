@@ -1,6 +1,6 @@
 function navbar () {
     return `
-    <div>burger menu</div>
+    <div><img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/></div>
         <div>
             <h1>ZARA</h1>
         </div>
