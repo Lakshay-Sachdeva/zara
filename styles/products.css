@@ -1,0 +1,9 @@
+#products{
+    margin: 8% 1%;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 5%;
+}
+#products div img{
+    width: 100%;
+}
