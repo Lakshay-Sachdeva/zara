@@ -1,0 +1,22 @@
+#content{
+    display: flex;
+    margin: 10%;
+    gap: 10%
+}
+#content div{
+    width: 30%;
+}
+#content div button{
+    width: 50%;
+    height: 5vh;
+    padding: 1%;
+    font-size: 20px;
+    margin: 2% 0 ;
+    color: white ;
+    background-color:black;
+}
+#content div input{
+    width: 60%;
+    padding: 2%;
+    margin: 2% 0 ;
+}
