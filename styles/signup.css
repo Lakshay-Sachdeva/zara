@@ -1,0 +1,20 @@
+#content{
+    margin: 15%;
+    width: 60%;
+    padding: 2%;
+}
+#content input{
+    width: 40%;
+    margin: 0.5%;
+    padding: 1%;
+    font-size: 16px;
+}
+#btn{
+    width: 30%;
+    height: 5vh;
+    padding: 1%;
+    font-size: 20px;
+    margin: 4% 0 ;
+    color: white ;
+    background-color:black;
+}
