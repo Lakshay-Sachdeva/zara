@@ -1,0 +1,43 @@
+#content{
+    display: flex;
+    margin: 10% 5% ;
+    gap: 5%;
+}
+#content div{
+    width: 30vw;
+    height: 30vh;
+    margin: 0 2%;
+}
+#content #images{
+    width: 100vw;
+    height: 80vh;
+    overflow-y: scroll;
+}
+#images::-webkit-scrollbar{
+    display: none;
+}
+#content #material-care{
+    margin-top: 20vh;
+    height: 50vh;
+    overflow-y: auto;
+}
+#material-care::-webkit-scrollbar{
+    display: none
+}
+.price{
+    font-size:25px;
+    line-height: 12px;
+    font-weight: 600;
+}
+.in_var{
+    padding: 2%;
+    width: 100%;
+    font-size: 20px;
+    margin: 5% 0 ;
+}
+#add_cart{
+    color: white ;
+    background-color: black ;
+    font-size: 24px;
+    padding: 6% 0 ;
+}
