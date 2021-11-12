@@ -1,0 +1,25 @@
+#requirements{
+    width: 30vw;
+    margin: 10% 8% ;
+}
+#requirements input{
+    padding: 2%;
+    font-size: 20px;
+    width: 100%;
+    margin: 2% 0;
+}
+#method{
+    width: 50%;
+    padding: 1%;
+    font-size: 20px;
+    margin: 2% 0 ;
+}
+#btn button{
+    width: 50%;
+    height: 5vh;
+    padding: 1%;
+    font-size: 20px;
+    margin: 2% 0 ;
+    color: white ;
+    background-color:black;
+}
