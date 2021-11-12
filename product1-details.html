@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="content">
+        <div id="material-care">
+            <h3>MATERIALS, CARE AND ORIGIN</h3>
+            <br/>
+            <h3>JOIN LIFE</h3>
+            <p>Care for fibre: at least 50% recycled wool & 30% recycled polyamide</p>
+            <br/>
+            <p>We use the Join Life label on clothing that is produced using technology and raw materials that help us to reduce environmental impact of our products.</p>
+            <br/>
+            <h3>RECYCLED WOOL</h3>
+            <p>Recycled wool is produced from wool recovered from other garments or the fibre waste from other products.</p>
+            <br/>
+            <p>This recovered wool is recycled through conventional recycling processes, i.e. the wool is sorted by type and colour and shredded. In order to guarantee the quality of the recycled thread, the shredded fibre is mixed with virgin fibre.</p>
+            <br/>
+            <p>By transforming this waste into a new resource, we reduce the consumption of virgin raw material and, in turn, the consumption of water, energy and natural resources.</p>
+        </div>
+        <div id="images"></div>
+        <div id="details">
+            <h2>WOOL BLEND JACKET WITH POCKETS</h2>
+            <h3>COLLARED JACKET IN A WOOL BLEND FABRIC, LAPEL COLLAR AND LONG SLEEVES WITH BUTTONED CUFFS. PATCH POCKETS WITH FLAPS ON THE HIP AND INSIDE POCKET DETAIL</h3>
+            <br/>
+            <p>7,999.00</p>
+            <p>MRP incl. of all taxes</p>
+            <br/>
+            <p>Colour camel | 0706/359</p>
+            <hr/>
+            <select name="Size" id="size">
+                <option value="s">S (UK S)</option>
+                <option value="m">M (UK M)</option>
+                <option value="l">L (UK L)</option>
+                <option value="xl">XL (UK XL)</option>
+            </select>
+            <hr/>
+            <button id="add_cart">Add to basket</button>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script type = "module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+    let nav_div = document.getElementById("navbar") ;
+    nav_div.innerHTML = navbar() ;
+    let foot = document.getElementById("footer") ;
+    foot.innerHTML = footer() ;
+
+    let images = ["./images/products/product_1/0706359704_1_1_1.webp" , "./images/products/product_1/0706359704_6_1_1.webp" , "./images/products/product_1/0706359704_6_2_1.webp" , "./images/products/product_1/0706359704_6_3_1.jpg" , "images/products/product_1/sustainability-extrainfo-label-1365_0.webp"] ;
+
+    let images_div = document.getElementById("images") ;
+
+    images.forEach(el=>{
+        let pic = document.createElement('img') ;
+        pic.src = el ;
+
+        images_div.append(pic) 
+    })
+
+    let addToCart = document.getElementById("add_cart")
+    addToCart.onclick = ()=>{
+        let item = {
+            name : "WOOL BLEND JACKET WITH POCKETS" , 
+            price :7999,
+            image: images[0],
+            size : document.getElementById("size").value
+        }
+        
+        item = JSON.stringify(item)
+        localStorage.getItem('cart');
+        localStorage.setItem('cart', item) ;
+    }
+    
+</script>
