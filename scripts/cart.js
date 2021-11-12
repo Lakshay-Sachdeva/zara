@@ -3,10 +3,11 @@
     let p_div = document.getElementById("products");
     let p_img = document.createElement('img');
     p_img.src = cart.image ;
-    let p_details = document.createElement('div')
-    let p_name = document.createElement('p');
+    let p_details = document.createElement('div');
+    p_details.className = "" ;
+    let p_name = document.createElement('h2');
     p_name.innerText = cart.name ;
-    let p_price = document.createElement('p')
+    let p_price = document.createElement('h3')
     p_price.innerText = `Rs: ${cart.price}` ;
     let p_size = document.createElement('p') ;
     p_size.innerText = cart.size ;
