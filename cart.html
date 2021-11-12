@@ -12,10 +12,14 @@
     <div id="navbar"></div>
     <div>
         <h2>SHOPPING BAG</h2>
-        <div id="items"></div>
+        <div id="items">1 ITEM</div>
         <div id="products"></div>
         <div id="checkout">
-            <div id="details"></div>
+            <div id="details">
+                <p id=total></p>
+                <p>INCLUDING GST</p>
+                <p>*EXCL SHIPPING COST</p>
+            </div>
             <button id="continue">Continue</button>
         </div>
     </div>
@@ -30,5 +34,5 @@
     let foot = document.getElementById("footer") ;
     foot.innerHTML = footer() ;
 
-    
 </script>
+<script src="./scripts/cart.js"></script>
