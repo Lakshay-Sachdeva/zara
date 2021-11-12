@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="content">
+        <div id="material-care">
+            <h3>MATERIALS, CARE AND ORIGINAL DOCUMENTATION</h3>
+            <br/>
+            <h3>MATERIALS, CARE AND ORIGINAL DOCUMENTATION</h3>
+            <p>We work with monitoring programmes to ensure compliance with safety, healh and quality standards for our products.</p>
+            <br/>
+            <p>The Green to Wear 2.0 standard aims to minimise the environmental impact of textile manufacturing. To that end, we have developed Inditex's The List of programme, which helps garuntee both production processes are clean and that our garments are safge and healthy.</p>
+        </div>
+        <div id="images"></div>
+        <div id="details">
+            <h2>PADDED PARKA WITH HOOD</h2>
+            <h3>LOOSE-FITTING PARKA WITH A QUILTED INTERIOR. HIGH NECK WITH ADJUSTABLE HOOD. LONG CUFFED SLEEVES WITH ADJUSTABLE TABS AND INNER ELASTIC CUFFS. WELT POCKETS</h3>
+            <br/>
+            <p>8,999.00</p>
+            <p>MRP incl. of all taxes</p>
+            <br/>
+            <p>Colour Stone | 3918/309</p>
+            <hr/>
+            <select name="Size" id="size">
+                <option value="s">S (UK S)</option>
+                <option value="m">M (UK M)</option>
+                <option value="l">L (UK L)</option>
+                <option value="xl">XL (UK XL)</option>
+            </select>
+            <hr/>
+            <button id="add_cart">Add to basket</button>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script type = "module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+    let nav_div = document.getElementById("navbar") ;
+    nav_div.innerHTML = navbar() ;
+    let foot = document.getElementById("footer") ;
+    foot.innerHTML = footer() ;
+
+    let images = ["./images/products/product_2/3918309806_1_1_1.webp" , "./images/products/product_2/3918309806_6_1_1.webp" , "./images/products/product_2/3918309806_6_2_1.webp" , "./images/products/product_2/3918309806_6_3_1.webp" ] ;
+
+    let images_div = document.getElementById("images") ;
+
+    images.forEach(el=>{
+        let pic = document.createElement('img') ;
+        pic.src = el ;
+
+        images_div.append(pic) 
+    })
+
+    let addToCart = document.getElementById("add_cart")
+    addToCart.onclick = ()=>{
+        let item = {
+            name : "PADDED PARKA WITH HOOD" , 
+            price :8999,
+            image: images[0],
+            size : document.getElementById("size").value
+        }
+        item = JSON.stringify(item)
+        localStorage.getItem('cart');
+        localStorage.setItem('cart', item) ;
+    }
+</script>
