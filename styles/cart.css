@@ -1,22 +1,23 @@
-#content{
-    margin: 10%;
+#content {
+  margin: 10%;
 }
-#products{
-    display:flex;
-    gap: 2%;
+#products {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
 }
-#products img{
-    width: 25vw;
-    margin-top: 2%;
+#products img {
+  width: 25vw;
+  margin-top: 2%;
 }
-#checkout{
-    display: flex;
-    flex-direction: row-reverse;
+#checkout {
+  display: flex;
+  flex-direction: row-reverse;
 }
-#continue{
-    padding: 10%;
-    font-size: 18px;
-    color: white ;
-    background-color: black ;
-    margin-top: 50%;
+#continue {
+  padding: 10%;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  margin-top: 50%;
 }
